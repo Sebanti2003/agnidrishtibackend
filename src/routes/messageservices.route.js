@@ -42,8 +42,7 @@ router.get("/dynamic-twiml", (req, res) => {
   twiml.dial().number(targetNumber); // ✅ this is better than directly dialing
 
   res.setHeader("Content-Type", "text/xml");
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  
+
 
   res.type("text/xml");
   console.log(twiml.toString());
