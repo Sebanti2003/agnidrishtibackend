@@ -12,9 +12,10 @@ db();
 
 //middlewares
 app.use(express.json());
-app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+app.use(express.static("public"));
+
 
 app.use("/api/v1", messageservices);
 
