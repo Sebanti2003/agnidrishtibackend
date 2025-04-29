@@ -44,8 +44,8 @@ router.get("/dynamic-twiml", (req, res) => {
   res.setHeader("Content-Type", "text/xml");
 
 
-  res.type("text/xml");
-  console.log(twiml.toString());
+//   res.type("text/xml");
+//   console.log(twiml.toString());
   res.send(twiml.toString());
 });
 
