@@ -22,9 +22,12 @@
   "author": "Sebanti Arpan Himadri Suvrodeep",
   "license": "ISC",
   "dependencies": {
+    "@vonage/server-sdk": "^3.21.0",
+    "axios": "^1.9.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "messagebird": "^4.0.1",
     "mongodb": "^6.16.0",
     "mongoose": "^8.14.0",
     "nodemon": "^3.1.10",
