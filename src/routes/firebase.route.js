@@ -1,8 +1,23 @@
 import express from "express";
 import db from "../firebase.js";
 import { ref, get } from "firebase/database";
+import { io } from "../index.js";
 
 const router = express.Router();
+
+setInterval(async () => {
+  try {
+    const dbRef = ref(db);
+    const snapshot = await get(dbRef);
+
+    if (snapshot.exists()) {
+      const data = snapshot.val();
+      io.emit("hardware-data", data); 
+    }
+  } catch (error) {
+    console.error("Firebase fetch error:", error);
+  }
+}, 5000);
 
 router.get("/hardware-data", async (req, res) => {
   try {
@@ -11,17 +26,13 @@ router.get("/hardware-data", async (req, res) => {
 
     if (snapshot.exists()) {
       const data = snapshot.val();
-      console.log("Fetched data:", data);
-      res.json(data); // Send full data
+      res.json(data);
     } else {
-      console.log("No data found.");
       res.status(404).json({ error: "No data found" });
     }
   } catch (error) {
-    console.error("Firebase fetch error:", error);
     res.status(500).json({ error: "Failed to fetch hardware data" });
   }
 });
-
 
 export default router;
