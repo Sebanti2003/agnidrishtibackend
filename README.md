@@ -81,6 +81,7 @@ To develop an **advanced IoT & AI-powered fire safety solution** that integrates
 - 🎥 [Project Demo Video](https://drive.google.com/drive/folders/18cT6864HT63d2ENbc-OQHbwbxe04_LLZ?usp=sharing)  
 - 📊 [Pitch Deck](https://www.canva.com/design/DAGjX-3L7l0/qZjkXeM1r-pV1MvVvru4QA/edit?utm_content=DAGjX-3L7l0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)  
 - 🌐 [Live Demo](https://agni-drishti.vercel.app/)
+- [Video](https://youtu.be/wGiNR9gEgPk?feature=shared)
 
 ---
 
